@@ -79,5 +79,5 @@
   when: sqlite_setup.changed
 
 
-- name: Start apache httpd
-  service: "name={{ apache_service }} state=running enabled=yes"
+- name: Start/restart apache httpd
+  service: "name={{ apache_service }} state=restarted enabled=yes"
