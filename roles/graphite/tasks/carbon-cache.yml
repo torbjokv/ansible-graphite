@@ -24,4 +24,4 @@
 
 
 - name: Start carbon cache
-  service: name=carbon-cache state=running enabled=yes
+  service: "name=carbon-cache state=running enabled=yes"
