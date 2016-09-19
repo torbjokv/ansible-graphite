@@ -68,7 +68,6 @@ TODO
 
 Known Issues
 ------------
-* If you are seeing "DatabaseError: database is locked" in your graphite logs, restarting apache may fix the issue for you. 
 * SELinux needs to be disabled
 
 
