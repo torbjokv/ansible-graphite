@@ -39,7 +39,7 @@
     - Reload apache
   when: ansible_os_family == 'Debian'
 
-- name: ensure graphite directory exists
+- name: ensure graphite webapp directory exists
   file:
     path: /opt/graphite/webapp/graphite
     state: directory
@@ -50,6 +50,10 @@
   notify:
     - Reload apache
 
+- name: ensure graphite conf directory exists
+  file:
+    path: /opt/graphite/conf
+    state: directory
 
 - name: Configure graphite.wsgi
   copy: src=opt/graphite/conf/graphite.wsgi dest=/opt/graphite/conf/graphite.wsgi mode=0644
