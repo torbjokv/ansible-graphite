@@ -13,3 +13,6 @@
   apt: "name={{ item }} state=present update_cache=yes"
   with_items: "{{ apache_pkgs }}"
   when: ansible_os_family == 'Debian'
+
+- name: Enable proxy apache module
+  apache2_module: state=present name=proxy
