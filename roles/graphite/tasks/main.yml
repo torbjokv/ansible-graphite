@@ -39,6 +39,10 @@
     - Reload apache
   when: ansible_os_family == 'Debian'
 
+- name: ensure graphite directory exists
+  file:
+    path: /opt/graphite/webapp/graphite
+    state: directory
 
 - name: Configure Graphite webapp
   template: src=opt/graphite/webapp/graphite/local_settings.py.j2
