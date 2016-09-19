@@ -1,4 +1,4 @@
 ---
 
 - name: Restart carbon-cache
-  service: name=carbon-cache state=restarted
+  service: "name=carbon-cache state=restarted"
